@@ -79,7 +79,7 @@ bool Cell::CheckAdjacentCells(i16 x, i16 y, vector<Cell*>* pAdded, Grid* pGrid)
 {
 	if (IsCellInBounds(x, y, pGrid) == true)
 	{
-		if (&pGrid->grid[x][y].val == 0)
+		if (pGrid->grid[x][y].val == 0)
 		{
 			if (IsCellInVector(&pGrid->grid[x][y], pAdded) == false)
 			{
