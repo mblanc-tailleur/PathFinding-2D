@@ -11,7 +11,7 @@ void Grid::Draw()
 			cout << "+---";
 		}
 
-		cout << "+";
+		cout << "+" << endl;
 
 		for (int16 b = 0; b < grid[a].size(); b++)
 		{
@@ -28,12 +28,10 @@ void Grid::Draw()
 			}
 		}
 
-		cout << "|";
-
-		cout << endl;
+		cout << "|" << endl;
 	}
 
-	for (int16 b = 0; b < grid[-1].size(); b++)
+	for (int16 b = 0; b < grid[0].size(); b++)
 	{
 		cout << "+---";
 	}
