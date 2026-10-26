@@ -1,17 +1,25 @@
 #pragma once
-#include "utils.cpp"
+
+class Cell;
 
 class Grid
 {
 	public:
-		void Draw();
-		void push_back(vector<int32> newVect);
+		i16 w;
+		i16 h;
 
-		vector<vector<int32>> grid;
+		v2i16 start;
+		v2i16 end;
+
+		void Draw();
+		i16 GetValue(v2i16 pos);
+		void push_back(vector<Cell> newVect);
+
+		vector<vector<Cell>> grid;
 
 		/*
-		//si int32 == 0, case vide
-		//si int32 == 1, mur
+		si i16 == 0, case vide
+		si i16 == 1, mur
 		*/
 };
 

@@ -1,22 +1,79 @@
+#include "utils.h"
+#include "Cell.h"
 #include "Grid.h"
+
+std::random_device rd;
+std::mt19937 gen(rd());
+
+void MakeGrid(Grid* pGrid)
+{
+	std::uniform_int_distribution<i16> dis(0, 4);
+
+	for (i16 a = 0; a < pGrid->h; a++)
+	{
+		vector<Cell> v;
+
+		for (i16 b = 0; b < pGrid->w; b++)
+		{
+			Cell c;
+			c.val = dis(gen);
+
+			if (c.val < 4)
+			{
+				c.val = 0;
+			}
+
+			else
+			{
+				c.val = 1;
+			}
+
+			v.push_back(c);
+		}
+
+		pGrid->push_back(v);
+	}
+}
 
 int main()
 {
 	Grid G;
+	G.w = 12;
+	G.h = 12;
 
-	for (int16 a = 0; a < 10; a++)
+	MakeGrid(&G);
+
+	std::uniform_int_distribution<i16> sizeX(0, G.w - 1);
+	std::uniform_int_distribution<i16> sizeY(0, G.h - 1);
+
+	v2i16 goalPos = { sizeY(gen), sizeX(gen) };
+
+	while (G.GetValue(goalPos) != 0)
 	{
-		vector<int32> v;
-
-		for (int16 b = 0; b < 10; b++)
-		{
-			int32 i = (a + b) % 2;
-
-			v.push_back(i);
-		}
-
-		G.push_back(v);
+		goalPos = { sizeY(gen), sizeX(gen) };
 	}
+
+	v2i16 startPos = { sizeY(gen), sizeX(gen) };
+
+	while ((G.GetValue(goalPos) != 0) or (goalPos == startPos))
+	{
+		goalPos = { sizeY(gen), sizeX(gen) };
+	}
+
+
+	startPos;
+	goalPos;
+
+	Cell c;
+	c.pos = startPos;
+
+	vector<Cell> added = {};
+	vector<Cell> explored = {};
+
+	c.BreadthFirstSearch(goalPos, &G);
+
+	G.start = startPos;
+	G.end = goalPos;
 
 	G.Draw();
 }

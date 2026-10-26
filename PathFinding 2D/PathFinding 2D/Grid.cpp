@@ -1,28 +1,50 @@
+#include "utils.h"
 #include "Grid.h"
+#include "Cell.h"
 
 void Grid::Draw()
 {
 	system("cls");
 
-	for (int16 a = 0; a < grid.size(); a++)
+	for (i16 a = 0; a < h; a++)
 	{
-		for (int16 b = 0; b < grid[a].size(); b++)
+		for (i16 b = 0; b < w; b++)
 		{
 			cout << "+---";
 		}
 
 		cout << "+" << endl;
 
-		for (int16 b = 0; b < grid[a].size(); b++)
+		for (i16 b = 0; b < w; b++)
 		{
 			cout << "|";
 
-			if (grid[a][b] == 0)
+			if (grid[a][b].val == 0)
 			{
-				cout << "   ";
+				if (grid[a][b].checked == 2)
+				{
+					cout << "\x1b[42m";
+				}
+
+				if ((a == start.x) and (b == start.y))
+				{
+					cout << "STA";
+				}
+
+				else if ((a == end.x) and (b == end.y))
+				{
+					cout << "END";
+				}
+
+				else
+				{
+					cout << "   ";
+				}
+
+				cout << "\x1b[40m";
 			}
 
-			else if (grid[a][b] == 1)
+			else if (grid[a][b].val == 1)
 			{
 				cout << "XXX";
 			}
@@ -31,7 +53,7 @@ void Grid::Draw()
 		cout << "|" << endl;
 	}
 
-	for (int16 b = 0; b < grid[0].size(); b++)
+	for (i16 b = 0; b < w; b++)
 	{
 		cout << "+---";
 	}
@@ -39,7 +61,12 @@ void Grid::Draw()
 	cout << "+";
 }
 
-void Grid::push_back(vector<int32> newVect)
+i16 Grid::GetValue(v2i16 pos)
+{
+	return grid[pos.x][pos.y].val;
+}
+
+void Grid::push_back(vector<Cell> newVect)
 {
 	grid.push_back(newVect);
 }

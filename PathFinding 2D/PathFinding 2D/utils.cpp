@@ -1,8 +1,21 @@
-#include <iostream>
-#include <vector>
+#include "utils.h"
 
-using namespace std;
+bool v2i16::operator==(const v2i16& other) const
+{
+	if ((x == other.x) and (y == other.y))
+	{
+		return true;
+	}
 
-using int8 = char;
-using int16 = short;
-using int32 = int;
+	return false;
+}
+
+bool v2i16::operator!=(const v2i16& other) const
+{
+	if ((x != other.x) or (y != other.y))
+	{
+		return true;
+	}
+
+	return false;
+}
