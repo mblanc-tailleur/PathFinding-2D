@@ -23,17 +23,17 @@ void Grid::Draw()
 			{
 				if (grid[a][b].checked == 2)
 				{
-					cout << "\x1b[42m";
+					cout << GREENBACKGROUND;
 				}
 
 				if ((a == start.x) and (b == start.y))
 				{
-					cout << "STA";
+					cout << REDWRITE << "STA" << WHITEWRITE;
 				}
 
 				else if ((a == end.x) and (b == end.y))
 				{
-					cout << "END";
+					cout << BLUEWRITE << "END" << WHITEWRITE;
 				}
 
 				else
@@ -41,7 +41,7 @@ void Grid::Draw()
 					cout << "   ";
 				}
 
-				cout << "\x1b[40m";
+				cout << BLACKBACKGROUND;
 			}
 
 			else if (grid[a][b].val == 1)

@@ -21,28 +21,11 @@ void Cell::BreadthFirstSearch(v2i16 goalPos, Grid* pGrid)
 
 	i16 step = 1;
 
-	while (added.size() > 0)
+	bool keepGoing1 = true;
+
+	while (keepGoing1 == true)
 	{
 		Cell* act = added[0];
-
-		if (act->pos == goalPos)
-		{
-			Cell* current = act;
-
-			while (current->pos != pos)
-			{
-				current->checked = 2;
-				current = current->previous;
-			}
-
-			current->checked = 2;
-		}
-
-		else
-		{
-			act->checked = 1;
-			added.erase(added.begin());
-		}
 
 		if (CheckAdjacentCells(i16(act->pos.x - step), act->pos.y, pAdded, pGrid) == true)
 		{
@@ -68,9 +51,51 @@ void Cell::BreadthFirstSearch(v2i16 goalPos, Grid* pGrid)
 			act->next.push_back(&pGrid->grid[act->pos.x][i16(act->pos.y + step)]);
 		}
 
-		for (i16 k = 1; k < act->next.size(); k++)
+		for (i16 k = 0; k < act->next.size(); k++)
 		{
 			act->next[k]->previous = act;
+		}
+
+		if (act->pos == goalPos)
+		{
+			Cell* current = act;
+
+			bool keepGoing2 = true;
+
+			while (keepGoing2 == true)
+			{
+				pGrid;
+
+				current->checked = 2;
+
+				if (current->previous == nullptr)
+				{
+					keepGoing2 = false;
+				}
+
+				else if (current->previous->pos == pos)
+				{
+					keepGoing2 = false;
+				}
+
+				current = current->previous;
+			}
+
+			this->checked = 2;
+
+			added.clear();
+		}
+
+		else
+		{
+			act->checked = 1;
+			added.erase(added.begin());
+		}
+		
+		if (added.size() < 1)
+		{
+			keepGoing1 = false;
+			break;
 		}
 	}
 }

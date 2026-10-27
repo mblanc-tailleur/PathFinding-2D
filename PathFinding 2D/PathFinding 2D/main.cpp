@@ -28,6 +28,8 @@ void MakeGrid(Grid* pGrid)
 				c.val = 1;
 			}
 
+			c.pos = { a, b };
+
 			v.push_back(c);
 		}
 
@@ -46,14 +48,14 @@ int main()
 	std::uniform_int_distribution<i16> sizeX(0, G.w - 1);
 	std::uniform_int_distribution<i16> sizeY(0, G.h - 1);
 
-	v2i16 goalPos = { sizeY(gen), sizeX(gen) };
+	v2i16 startPos = { sizeY(gen), sizeX(gen) };
 
-	while (G.GetValue(goalPos) != 0)
+	while (G.GetValue(startPos) != 0)
 	{
-		goalPos = { sizeY(gen), sizeX(gen) };
+		startPos = { sizeY(gen), sizeX(gen) };
 	}
 
-	v2i16 startPos = { sizeY(gen), sizeX(gen) };
+	v2i16 goalPos = { sizeY(gen), sizeX(gen) };
 
 	while ((G.GetValue(goalPos) != 0) or (goalPos == startPos))
 	{
@@ -64,16 +66,15 @@ int main()
 	startPos;
 	goalPos;
 
-	Cell c;
-	c.pos = startPos;
-
 	vector<Cell> added = {};
 	vector<Cell> explored = {};
 
-	c.BreadthFirstSearch(goalPos, &G);
-
 	G.start = startPos;
 	G.end = goalPos;
+
+	G.Draw();
+
+	G.grid[startPos.x][startPos.y].BreadthFirstSearch(goalPos, &G);
 
 	G.Draw();
 }
