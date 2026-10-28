@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DA3CE69-70B6-463F-87F4-101ECD15AC1F}|PathFinding 2D\\PathFinding 2D.vcxproj|C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3DA3CE69-70B6-463F-87F4-101ECD15AC1F}|PathFinding 2D\\PathFinding 2D.vcxproj|solutionrelative:PathFinding 2D\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DA3CE69-70B6-463F-87F4-101ECD15AC1F}|PathFinding 2D\\PathFinding 2D.vcxproj|C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3DA3CE69-70B6-463F-87F4-101ECD15AC1F}|PathFinding 2D\\PathFinding 2D.vcxproj|solutionrelative:PathFinding 2D\\Cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA3CE69-70B6-463F-87F4-101ECD15AC1F}|PathFinding 2D\\PathFinding 2D.vcxproj|C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3DA3CE69-70B6-463F-87F4-101ECD15AC1F}|PathFinding 2D\\PathFinding 2D.vcxproj|solutionrelative:PathFinding 2D\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DA3CE69-70B6-463F-87F4-101ECD15AC1F}|PathFinding 2D\\PathFinding 2D.vcxproj|C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -68,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Grid.cpp",
               "DocumentMoniker": "C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Grid.cpp",
               "RelativeDocumentMoniker": "PathFinding 2D\\Grid.cpp",
               "ToolTip": "C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Grid.cpp",
               "RelativeToolTip": "PathFinding 2D\\Grid.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-10-26T15:56:46.863Z",
               "EditorCaption": ""
@@ -94,13 +94,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Cell.cpp",
               "DocumentMoniker": "C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Cell.cpp",
               "RelativeDocumentMoniker": "PathFinding 2D\\Cell.cpp",
-              "ToolTip": "C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Cell.cpp",
-              "RelativeToolTip": "PathFinding 2D\\Cell.cpp",
-              "ViewState": "AgIAAEgAAAAAAAAAAAApwFUAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\mblanc-tailleur\\Documents\\GitHub\\PathFinding-2D\\PathFinding 2D\\PathFinding 2D\\Cell.cpp*",
+              "RelativeToolTip": "PathFinding 2D\\Cell.cpp*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAApwFQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-10-26T13:20:36.916Z",
               "EditorCaption": ""
