@@ -18,10 +18,10 @@ using i32 = int;
 
 class v2i16
 {
-public:
-	i16 x;
-	i16 y;
+	public:
+		i16 x;
+		i16 y;
 
-	bool operator==(const v2i16& other) const;
-	bool operator!=(const v2i16& other) const;
+		bool operator==(const v2i16& other) const;
+		bool operator!=(const v2i16& other) const;
 };
